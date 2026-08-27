@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #0f0f11;
+    --bg-topbar: #09090a;
+    --bg-card: #18181c;
+    --bg-footer: #0b0b0c;
+    --border-color: #2a2a30;
+    --gold: #d4af37;
+    --gold-light: #f3c05d;
+    --gold-dark: #b88220;
+    --text-light: #ffffff;
+    --text-muted: #a3a3ac;
+    --text-dim: #6d6d75;
+    --green-accent: #34d399;
+  }
+
+  html {
+    background-color: #0f0f11;
+    color: #ffffff;
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0f0f11;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Specific Figma Button Styles */
+.btn-figma-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d4af37 0%, #f3c05d 100%);
+  color: #0f0f11;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-figma-gold:hover {
+  background: linear-gradient(135deg, #f7d27e 0%, #d4af37 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+}
+
+.btn-figma-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #d4af37;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 14px 28px;
+  border-radius: 4px;
+  border: 1px solid #d4af37;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-figma-outlined:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn-figma-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f0f11;
+  color: #d4af37;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-figma-dark:hover {
+  background: #18181c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a30;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}

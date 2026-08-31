@@ -35,7 +35,7 @@ export default function AboutLocationSection() {
           </div>
 
           <p className="font-sans font-normal text-base text-[#a3a3ac] leading-[26px]">
-            Situated centrally at 450 Elizabeth St, AusDrive Motor Group's flagship servicing headquarters boasts state-of-the-art diagnostic bays, highly calibrated computerized alignment rigs, and premium synthetic lubricant hubs. Our clean, secure environment is engineered to serve premium European machinery and modern family daily transports under optimal climate controls.
+            Situated conveniently at 10 Gladstone St, Thomastown, AusDrive Motor Group's flagship servicing headquarters boasts state-of-the-art diagnostic bays, highly calibrated computerized alignment rigs, and premium synthetic lubricant hubs. Our clean, secure environment is engineered to serve premium European machinery and modern family daily transports under optimal climate controls.
           </p>
 
           {/* Stats Row */}
@@ -66,7 +66,7 @@ export default function AboutLocationSection() {
                     Flagship Servicing Bays
                   </h3>
                   <p className="font-sans text-[12px] text-[#a3a3ac]">
-                    450 Elizabeth St, Melbourne VIC 3000
+                    10 Gladstone St, Thomastown VIC 3074
                   </p>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function AboutLocationSection() {
             </div>
 
             <a
-              href="https://maps.app.goo.gl/D5oGeGAkukcujePo9"
+              href="https://maps.app.goo.gl/nrDHDF8RM6idfV9t5"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-[13px] font-heading font-bold text-[#d4af37] hover:text-[#f3c05d] transition-colors"

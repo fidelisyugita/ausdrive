@@ -26,7 +26,7 @@ Built with **React**, **Vite**, and **Tailwind CSS**, strictly matching the offi
 - **Interactive Service Booking**: Multi-field scheduling form with vehicle model, service selection, calendar date picker, and confirmation view.
 - **Prestige Servicing Packages**: Structured pricing tiers ($189 Basic Maintenance, $349 Full Service [*MOST POPULAR*], $549 Major Mechanical) with feature checklists.
 - **Verified Client Testimonials**: Authentic Melbourne driver reviews with 5-star ratings.
-- **Melbourne Workshop & Showroom**: 450 Elizabeth St, Melbourne VIC 3000 showcase with workshop statistics (`12,000+` Serviced, `100%` OEM Warranty, `24 Hour` Response) and directions link.
+- **Melbourne Workshop & Showroom**: 10 Gladstone St, Thomastown VIC 3074 showcase with workshop statistics (`12,000+` Serviced, `100%` OEM Warranty, `24 Hour` Response) and directions link.
 - **Interactive FAQ Accordion**: Expandable Q&A covering warranty compliance, servicing duration, replacement cars, and mechanical guarantees.
 - **CTA Banner**: Full-width gold gradient action banner.
 - **Footer**: Brand story, Quick Links, Get in Touch details, Social Media links, LMCT 12345 & ABN licensing, and copyright info.
@@ -118,4 +118,4 @@ ausdrive/
 
 © 2025 AusDrive Motor Group. All rights reserved.  
 **LMCT License**: 12345 · **ABN**: 87 123 456 789  
-450 Elizabeth St, Melbourne VIC 3000
+10 Gladstone St, Thomastown VIC 3074

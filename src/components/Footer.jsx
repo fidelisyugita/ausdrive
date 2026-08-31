@@ -49,12 +49,12 @@ export default function Footer({ onOpenBooking }) {
             <div className="flex flex-col gap-[12px] font-sans font-normal text-[14px] leading-[19px] text-[#a3a3ac]">
               <p>
                 <a 
-                  href="https://maps.app.goo.gl/D5oGeGAkukcujePo9" 
+                  href="https://maps.app.goo.gl/nrDHDF8RM6idfV9t5" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-white transition-colors"
                 >
-                  450 Elizabeth St, Melbourne VIC 3000
+                  10 Gladstone St, Thomastown VIC 3074
                 </a>
               </p>
               <p>

@@ -14,6 +14,7 @@ export default function BookingModal({ isOpen, onClose, initialService }) {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     if (initialService) {
@@ -23,12 +24,35 @@ export default function BookingModal({ isOpen, onClose, initialService }) {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMessage('');
 
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/ausdrivemotorgroup@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          'Full Name': formData.fullName,
+          'Phone': formData.phone,
+          'Email': formData.email,
+          'Vehicle': formData.vehicle,
+          'Service Type': formData.serviceType,
+          'Preferred Date': formData.preferredDate,
+          _subject: `New Service Booking Request: ${formData.vehicle || 'Vehicle'} - ${formData.fullName}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit booking. Please try again.');
+      }
+
       setSubmitted(true);
       confetti({
         particleCount: 80,
@@ -36,7 +60,12 @@ export default function BookingModal({ isOpen, onClose, initialService }) {
         origin: { y: 0.6 },
         colors: ['#d4af37', '#f3c05d', '#ffffff']
       });
-    }, 600);
+    } catch (err) {
+      console.error('Booking submission error:', err);
+      setErrorMessage('Unable to send booking right now. Please try again or call 0400 857 777.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -183,13 +212,19 @@ export default function BookingModal({ isOpen, onClose, initialService }) {
                 </div>
               </div>
 
+              {errorMessage && (
+                <div className="p-3 bg-red-500/10 border border-red-500/30 rounded text-red-400 text-xs text-center">
+                  {errorMessage}
+                </div>
+              )}
+
               <div className="pt-2">
                 <button
                   type="submit"
                   disabled={loading}
                   className="btn-figma-gold w-full"
                 >
-                  {loading ? 'Submitting...' : 'Confirm Booking'}
+                  {loading ? 'Sending Request...' : 'Confirm Booking'}
                 </button>
               </div>
             </form>
